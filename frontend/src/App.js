@@ -34,6 +34,7 @@ import AnimatedBackGround from "./components/AnimatedBackground/AnimatedBackGrou
 import AdminWithdraw from "./Pages/AdminPage/AdminWithdraw/AdminWithdraw";
 import AdminMessage from "./Pages/AdminPage/AdminMessage/AdminMessage";
 import UserHelpPage from "./Pages/UserHelp/UserHelpPage";
+import Footer from "./components/Footer/Footer";
 
 const Landing = React.lazy(() => import("./Pages/LandingPage.js/Landing"));
 const Login = React.lazy(() => import("./Pages/LoginPage/Login"));
@@ -162,6 +163,7 @@ function App() {
             <Route exact path="/admin/withdraw" element={<AdminWithdraw />} />
             <Route exact path="/admin/message" element={<AdminMessage socket={socket} />} />
           </Routes>
+          <Footer />
         </Router>
       )}
     </div>
