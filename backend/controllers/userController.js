@@ -290,7 +290,7 @@ export const forgotPasswordVerify = AsyncHandler(async (req, res) => {
   const { email, otp, password } = req.body;
 
   const user = await User.findOne({ email: email });
-  const id = user?._id + "*";
+  const id = user._id + "*";
 
   const token = await VerificationToken.findOne({ owner: id });
   if (!token) {
