@@ -24,11 +24,11 @@ import {sendMail} from './utils/mail.js'
 
 mongoDB();
 
-const corsOptions = {
-  origin: "http://localhost:3000",
-  credentials: true, //access-control-allow-credentials:true
-  optionSuccessStatus: 200,
-};
+// const corsOptions = {
+//   origin: "http://localhost:3000",
+//   credentials: true, //access-control-allow-credentials:true
+//   optionSuccessStatus: 200,
+// };
 
 dotenv.config();
 
@@ -40,12 +40,12 @@ export const instance = new Razorpay({
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors(corsOptions));
+app.use(cors());
 
 const httpServer = http.createServer(app);
 const io = new Server(httpServer, {
   cors: {
-    origin: ["http://localhost:3000"],
+    origin: "*",
   },
 });
 
@@ -53,7 +53,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 app.get("/", async (req, res) => {
-  res.send("API IS HOT");
+  res.send("Please go back to your home Page : )");
   
 });
 

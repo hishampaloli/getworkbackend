@@ -49,6 +49,7 @@ export const checkout = (amount, user) => async (dispatch) => {
         backgroundColor: "#3ccf4e",
       },
     };
+    
 
     var rzp1 = new window.Razorpay(options);
     rzp1.open();

@@ -77,7 +77,8 @@ console.log(admin);
       await employee.save();
       await admin.save();
 
-      res.redirect(`http://localhost:3000`);
+      res.redirect('/');
+
     } else {
       const employer = await Employer.findOne({ owner: userId });
 
@@ -86,7 +87,7 @@ console.log(admin);
       await employer.save();
       await admin.save();
 
-      res.redirect(`http://localhost:3000`);
+      res.redirect('/');
     }
   } else {
     res.json({ success: false });
@@ -142,8 +143,8 @@ export const payPalVerification = AsyncHandler(async (req, res) => {
       admin.soldConnect = admin.soldConnect + amnt / 5;
       await employee.save();
       await admin.save();
+      res.redirect('/');
 
-      res.redirect(`http://localhost:3000`);
     } else {
       const employer = await Employer.findOne({ owner: userId });
 
@@ -151,8 +152,8 @@ export const payPalVerification = AsyncHandler(async (req, res) => {
       admin.balance = admin.balance + amnt;
       await employer.save();
       await admin.save();
+      res.redirect('/');
 
-      res.redirect(`http://localhost:3000`);
     }
 });
 
