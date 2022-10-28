@@ -54,7 +54,6 @@ const __dirname = path.dirname(__filename);
 
 app.get("/", async (req, res) => {
   res.send("Please go back to your home Page : )");
-  
 });
 
 app.use("/api", UserRouter);

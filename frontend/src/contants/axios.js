@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const axiosBaseUrl = "http://localhost:3001/api"
+const axiosBaseUrl = "https://getworker.ml/api"
 
 export const axiosUserInstance = axios.create({
   baseURL: axiosBaseUrl,

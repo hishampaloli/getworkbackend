@@ -48,14 +48,14 @@ function App() {
   const [socket, setSocket] = useState(null);
 
   useEffect(() => {
-    setSocket(io("http://localhost:3001"));
+    setSocket(io("https://getworker.ml"));
   }, []);
 
   useEffect(() => {
-    // setLoading(true);
-    //     setTimeout(() => {
-    //       setLoading(false);
-    //     }, 1500);
+    setLoading(true);
+        setTimeout(() => {
+          setLoading(false);
+        }, 1000);
   }, []);
 
   return (

@@ -7,7 +7,7 @@ import { CALL_SUCCESS } from "./contants/chatConstants";
 
 const SocketContext = createContext();
 
-const socket = io("http://localhost:3001");
+const socket = io("https://getworker.ml/");
 
 const ContextProvider = ({ children }) => {
   const [stream, setStream] = useState(null);
