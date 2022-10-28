@@ -3,7 +3,7 @@ import crypto from "crypto";
 import AsyncHandler from "express-async-handler";
 import Employee from "../models/employeeModal.js";
 import Purchase from "../models/purchaseModal.js";
-import Admin from "../models/adminModel.js";
+import Admin from "../models/adminmodel.js";
 import Employer from "../models/employerModel.js";
 
 export const getkey = async (req, res) => {

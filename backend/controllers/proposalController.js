@@ -5,7 +5,7 @@ import Jobs from "../models/jobsModal.js";
 import Employer from "../models/employerModel.js";
 import Proposals from "../models/proposalModal.js";
 import Notification from "../models/messageModal.js";
-import Admin from "../models/adminModel.js";
+import Admin from "../models/adminmodel.js";
 import { mailTransport, sendMail } from "../utils/mail.js";
 
 
