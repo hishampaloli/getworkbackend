@@ -4,7 +4,6 @@ import generateToken from "../utils/jsonwebtoken.js";
 import Employee from "../models/employeeModal.js";
 import Employer from "../models/employerModel.js";
 import User from "../models/userModal.js";
-import Admin from "../models/adminModel.js";
 import VerificationToken from "../models/UserVerification.js";
 import { generateOtp } from "../utils/getOtp.js";
 import { mailTransport } from "../utils/mail.js";
