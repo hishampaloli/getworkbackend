@@ -5,7 +5,7 @@ import Employee from "../models/employeeModal.js";
 import User from "../models/userModal.js";
 import BankDetails from "../models/bankDetailsModel.js";
 import Kyc from "../models/kycModel.js";
-import Admin from "../models/adminModel.js";
+import Admin from "../models/adminmodel.js";
 import Employer from "../models/employerModel.js";
 import Jobs from "../models/jobsModal.js";
 import Notification from "../models/messageModal.js";
