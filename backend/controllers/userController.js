@@ -309,3 +309,4 @@ export const forgotPasswordVerify = AsyncHandler(async (req, res) => {
     res.json("failed");
   }
 });
+
