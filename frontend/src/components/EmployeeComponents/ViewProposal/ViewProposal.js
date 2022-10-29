@@ -21,7 +21,6 @@ const ViewProposal = ({ socket }) => {
   const acceptProposalData = useSelector((state) => state.acceptProposal);
   const employerProfile = useSelector((state) => state.employerData);
 
-  console.log(employerProfile?.userInfo?.balance);
 
   const { id } = useParams();
   useEffect(() => {

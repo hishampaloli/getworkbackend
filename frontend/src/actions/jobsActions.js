@@ -208,7 +208,6 @@ export const approveJob = (id) => async (dispatch) => {
       config
     );
 
-    console.log(data);
 
   } catch (error) {
   }

@@ -16,7 +16,6 @@ const UserHelpPage = ({ socket }) => {
 
   const myChats = useSelector((state) => state.myChats?.chat);
 
-  console.log(myChats);
 
   useEffect(() => {
     dispatch(getMyHelpChats(userInfo?._id));
@@ -35,6 +34,8 @@ const UserHelpPage = ({ socket }) => {
     if (!socket) return;
     socket.on("new-admin-room-created", () => {
       console.log("joined");
+    
+      
     });
   }, [socket]);
 

@@ -15,7 +15,6 @@ const SavedJobs = () => {
   useEffect(() => {
     dispatch(getEmployeeProfile());
   }, []);
-  console.log(userProfile);
   return (
     <div>
   

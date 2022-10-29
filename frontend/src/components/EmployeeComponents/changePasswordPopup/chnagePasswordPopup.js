@@ -26,7 +26,6 @@ const ChangePasswordPopup = () => {
 
   const { userData } = userProfile;
 
-  console.log(changePasswordR?.message);
 
   const handleSubmit = (e) => {
     e.preventDefault();

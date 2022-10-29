@@ -31,7 +31,6 @@ const ChatWindow = ({ socket, user, room, help }) => {
     if (!socket) return;
 
     socket.on("message-from-server", (data) => {
-      console.log("message from server");
       if (data.message) {
         setchat((prev) => [
           ...prev,

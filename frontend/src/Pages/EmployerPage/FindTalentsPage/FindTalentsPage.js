@@ -26,7 +26,6 @@ const FindTalentsPage = () => {
   const employerData = useSelector((state) => state.employerData);
   const talents = useSelector((state) => state.findTalents);
 
-  console.log(talents);
 
   const [keyword, setKeyword] = useState("");
   const [earnings, setEarnings] = useState("");
@@ -49,8 +48,7 @@ const FindTalentsPage = () => {
     dispatch(findTalents(keyword, earnings, language, jobsDone, page));
   }, [page]);
 
-  console.log(talents?.pages);
-
+  
   useEffect(() => {
     if (!user?.userInfo) {
       navigate("/login");

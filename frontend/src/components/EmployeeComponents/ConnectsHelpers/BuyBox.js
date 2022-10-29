@@ -6,7 +6,6 @@ import Alert from "@mui/material/Alert";
 import CloseIcon from "@mui/icons-material/Close";
 
 const BuyBox = ({ buy, amount, user }) => {
-    console.log(user);
   const [fail, setFail] = useState("");
   const dispatch = useDispatch();
 

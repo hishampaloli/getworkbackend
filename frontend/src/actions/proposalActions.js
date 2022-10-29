@@ -70,7 +70,6 @@ export const myProposals = (pageNumber = '') => async (dispatch) => {
       config
     );
 
-    console.log(data);
     dispatch({
       type: MY_PROPOSAL_SUCCUSS,
       payload: data,

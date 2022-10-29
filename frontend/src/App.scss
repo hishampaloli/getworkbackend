@@ -21,3 +21,8 @@ body {
   font-family: "Secular One", sans-serif;
 }
 
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

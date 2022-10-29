@@ -5,7 +5,6 @@ import axios from "axios";
 const Paypay = ({ amount, user, fail, succuss, noFail }) => {
   const [paint, setpaint] = useState(false);
 
-console.log(user);
   return (
     <div>
       <PayPalButtons
@@ -42,11 +41,10 @@ console.log(user);
           );
         }}
         onCancel={() => {
-            console.log('failed')
             fail()
         }}
         onError={(err) => {
-          console.log(err);
+          alert(err)
         }}
       />
     </div>

@@ -20,7 +20,6 @@ const AdminProfile = () => {
   const password = useSelector((state) => state.changePasswords);
   const purchaseHistoryy = useSelector((state) => state.purchaseHistory);
 
-  console.log(Profile);
 
   const [oldPass, setOldPass] = useState("");
   const [showChart, setShowChart] = useState(false);

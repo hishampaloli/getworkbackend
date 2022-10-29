@@ -6,12 +6,12 @@
   background-color: white;
   justify-content: space-between;
 
-  .left {
-    margin-left: 40px;
+  .leftt {
+    margin-left: 30px;
     h1 {
       color: #3ccf4e;
       font-weight: 700;
-      font-size: 40px;
+      font-size: 2rem;
       line-height: 60px;
     }
     p {
@@ -31,5 +31,35 @@
       margin-top: 40px;
       font-size: 18px;
     }
+  }
+
+  .right {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+
+@media (max-width: 1050px) {
+  .landing-main {
+   display: flex;
+   flex-direction: column;
+   justify-content: start;
+  align-items: flex-start;
+   .leftt {
+    margin-top: 20px;
+    
+   }
+   .right {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    img {
+      width: 70%;
+      display: flex;
+      
+    }
+   }
   }
 }

@@ -25,7 +25,6 @@ const ProposalComponent = ({ proposals, sort }) => {
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = data?.slice(indexOfFirstPost, indexOfLastPost);
 
-  console.log(data);
 
   return (
     <>

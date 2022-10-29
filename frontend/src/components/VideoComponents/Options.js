@@ -20,12 +20,11 @@ const Options = ({ children, callId}) => {
   } = useContext(SocketContext);
 
 
-  console.log(call);
 
   const dispatch = useDispatch();
 
   const videoCall = useSelector((state) => state.callVideo);
-  console.log(videoCall);
+  
 
   const [dec, setDec] = useState(false);
   const [cling, setCling] = useState(false);

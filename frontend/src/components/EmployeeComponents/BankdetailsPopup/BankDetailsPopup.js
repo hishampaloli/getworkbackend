@@ -18,9 +18,7 @@ import { useNavigate } from "react-router-dom";
 const BankPopup = ({ bankData }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  //   ifsc.get('SBIN0005943').then(function(res){
-  //     console.log(res);
-  // })
+
 
   const userProfile = useSelector((state) => state.employeeData);
   const [ifsc, setIfsc] = useState("");
@@ -33,7 +31,6 @@ const BankPopup = ({ bankData }) => {
   const { userData } = userProfile;
   const BankData = useSelector((state) => state.bankData);
 
-  console.log(BankData);
   const handleSubmit = (e) => {
     e.preventDefault();
     if (acNumber != ConfirmAcNumber) {
@@ -50,7 +47,6 @@ const BankPopup = ({ bankData }) => {
     if (ifsc.match(/[A-Z|a-z]{4}[0][a-zA-Z0-9]{6}$/)) {
       Ifsc.get(ifsc).then(function (res) {
         setBankDetaiks(res);
-        console.log("evuofvfuesr");
       });
     } else {
       setBankDetaiks({});

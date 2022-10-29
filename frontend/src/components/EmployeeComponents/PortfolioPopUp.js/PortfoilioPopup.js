@@ -44,7 +44,6 @@ const KycPopup = () => {
       ImageData
     );
 
-    console.log(pan_data);
 
     dispatch(addPortfolio(pan_data?.data?.secure_url, title, description));
   };

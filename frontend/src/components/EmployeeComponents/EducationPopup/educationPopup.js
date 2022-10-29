@@ -23,7 +23,6 @@ const EducationPopup = () => {
 
   const { userData } = userProfile;
 
-  console.log(educationReq);
 
   return (
     <div>

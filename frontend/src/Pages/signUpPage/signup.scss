@@ -4,7 +4,7 @@
   justify-content: center;
   height: 100vh;
   background-color: #f1f2f4;
-
+  padding: 10px;
   .box {
     width: 700px;
     margin-top: 50px;
@@ -27,7 +27,7 @@
       border-radius: 35px;
       padding: 15px 15px;
       margin-top: 20px;
-      width: 300px;
+      // width: 300px;
       color: white;
     }
 
@@ -203,6 +203,7 @@
 
 
 @media (max-width: 650px) {
+  .main {
   .box {
     width: 500px;
   }
@@ -222,8 +223,10 @@
     border-radius: 15px;
   }
 }
+}
 
 @media (max-width: 550px) {
+  .main {
   .box {
     width: 450px;
   }
@@ -236,10 +239,12 @@
     padding: 25px;
   }
 }
+}
 
 @media (max-width: 480px) {
+  .main {
   .box {
-    width: 350px;
+    width: 100%;
   }
   .box .row .btn-2 {
     width: 300px;
@@ -254,17 +259,17 @@
   }
 
   .mini-box-1 {
-    padding: 10px;
-    height: 130px;
+    width: 130px;
   }
 
   .mini-box-2 {
-    padding: 10px;
+    width: 130px;
   }
 
   .box .row1 input {
     width: 39%;
   }
+}
 }
 @media (max-width: 380px) {
   .box {

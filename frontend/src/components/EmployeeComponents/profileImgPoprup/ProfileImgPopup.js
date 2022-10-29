@@ -22,7 +22,6 @@ const ImagePopup = () => {
   const userProfile = useSelector((state) => state.employeeData);
   const profileImage = useSelector((state) => state.profileImage);
 
-  console.log(profileImage);
   const { userData } = userProfile;
 
   const [image, setImage] = useState("");

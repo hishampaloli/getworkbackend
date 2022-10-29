@@ -80,10 +80,11 @@
       }
     }
 
-    
+  
 
   }
 }
+
 .left h2 {
   color: #3ccf4e;
   font-family: "Secular One", sans-serif;
@@ -225,6 +226,18 @@
           width: 170px;
           padding: 10px 15px;
           border-radius: 5px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .main-header {
+    header {
+      .right {
+        .btn-1sdf {
+          display: none;
         }
       }
     }

@@ -67,6 +67,7 @@ const Header = ({ socket }) => {
     dispatch(logout());
   };
 
+
   return (
     <div className="main-header" style={{ width: "100%" }}>
       <header>
@@ -76,10 +77,13 @@ const Header = ({ socket }) => {
           </Link>
         </div>
 
-{!user ? '' : <div className="ham">
-          <MenuIcon onClick={() => setSmall(!small)} fontSize="large" />
-        </div> }
-        
+        {!user?.userInfo ? (
+          ""
+        ) : (
+          <div className="ham">
+            <MenuIcon onClick={() => setSmall(!small)} fontSize="large" />
+          </div>
+        )}
 
         {user?.userInfo?._id ? (
           <>
@@ -134,7 +138,12 @@ const Header = ({ socket }) => {
                     message
                   </Link>
 
-                  <Link>Balance : {employerProfile?.userInfo?.balance ? employerProfile?.userInfo?.balance  : 0}</Link>
+                  <Link>
+                    Balance :{" "}
+                    {employerProfile?.userInfo?.balance
+                      ? employerProfile?.userInfo?.balance
+                      : 0}
+                  </Link>
                   <Link
                     onClick={() => setNoti(!noti)}
                     style={{ position: "relative" }}
@@ -161,7 +170,11 @@ const Header = ({ socket }) => {
 
             <button
               className="btn"
-              style={{ backgroundColor: "transparent", color: " #3CCF4E", marginRight: '30px' }}
+              style={{
+                backgroundColor: "transparent",
+                color: " #3CCF4E",
+                marginRight: "30px",
+              }}
               onClick={() => setDrop(true)}
             >
               {user?.userInfo?.name}
@@ -169,14 +182,12 @@ const Header = ({ socket }) => {
           </>
         ) : (
           <div className="right">
-            <button className="btn-1sdf">
-              <Link
-                style={{  textDecoration: "none" }}
-                to="/signup"
-              >
+              <Link style={{ textDecoration: "none", cursor: 'pointer' }} to="/signup">
+            <button style={{cursor: 'pointer'}} className="btn-1sdf">
                 SignUp
-              </Link>
             </button>
+              </Link>
+              
             <button className="btn-2ad">
               <Link
                 style={{
@@ -302,8 +313,10 @@ const Header = ({ socket }) => {
             >
               profile
             </Link>
-            {user?.userInfo?.userType !== "admin" && <Link to={'/help'}>Help</Link>}
-            
+            {user?.userInfo?.userType !== "admin" && (
+              <Link to={"/help"}>Help</Link>
+            )}
+
             <Link onClick={handleLogout}>Logout</Link>
           </ul>
         </div>

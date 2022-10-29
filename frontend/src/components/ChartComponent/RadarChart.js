@@ -24,8 +24,6 @@ const RadarChart = () => {
     dispatch(getAllWithdraw())
   }, [])
 
-  console.log(finished);
-
 
   const state = {
           

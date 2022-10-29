@@ -163,7 +163,7 @@ function App() {
             <Route exact path="/admin/withdraw" element={<AdminWithdraw />} />
             <Route exact path="/admin/message" element={<AdminMessage socket={socket} />} />
           </Routes>
-          <Footer />
+          {/* <Footer /> */}
         </Router>
       )}
     </div>

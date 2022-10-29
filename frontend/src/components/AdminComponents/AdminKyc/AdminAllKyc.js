@@ -19,7 +19,7 @@ const AdminAllKyc = ({ kycRequest }) => {
   const [id, setId] = useState("");
   const kycStatus = useSelector((state) => state.kycReq);
 
-  console.log();
+  
   const [ed, setEd] = useState(false);
 
   return (

@@ -125,7 +125,6 @@ const PostJobs = () => {
 
               <select
                 onChange={(e) => {
-                  console.log(e.target.value);
                   setLevel(e.target.value);
                 }}
                 name="cars"
