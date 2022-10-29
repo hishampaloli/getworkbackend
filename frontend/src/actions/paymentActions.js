@@ -37,7 +37,7 @@ export const checkout = (amount, user) => async (dispatch) => {
       image:
         "https://res.cloudinary.com/dpiah7oyh/image/upload/v1666255506/GetworkerProfileImg/ezhbbjrlmfvbefegcfq2.png",
       order_id: data?.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
-      callback_url: `http://localhost:3000/api/credit/paymentVerification?userId=${tokenId._id}&amount=${data?.amount}&user=${user}`,
+      callback_url: `https://getworker.ml/api/credit/paymentVerification?userId=${tokenId._id}&amount=${data?.amount}&user=${user}`,
       prefill: {
         name: tokenId.name,
         email: tokenId.email,
