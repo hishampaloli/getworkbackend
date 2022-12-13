@@ -20,15 +20,15 @@ import path from "path";
 import { fileURLToPath } from "url";
 import Razorpay from "razorpay";
 import sockets from "./sockets/routes.js";
-import {sendMail} from './utils/mail.js'
+import { sendMail } from "./utils/mail.js";
 
 mongoDB();
 
-// const corsOptions = {
-//   origin: "http://localhost:3000",
-//   credentials: true, //access-control-allow-credentials:true
-//   optionSuccessStatus: 200,
-// };
+const corsOptions = {
+  origin: "http://localhost:3000",
+  credentials: true, //access-control-allow-credentials:true
+  optionSuccessStatus: 200,
+};
 
 dotenv.config();
 
@@ -40,9 +40,10 @@ export const instance = new Razorpay({
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors());
+app.use(cors(corsOptions));
 
 const httpServer = http.createServer(app);
+
 const io = new Server(httpServer, {
   cors: {
     origin: ["http://localhost:3000"],
@@ -54,7 +55,6 @@ const __dirname = path.dirname(__filename);
 
 app.get("/", async (req, res) => {
   res.send("Please go back to your home Page : )");
-
 });
 
 app.use("/api", UserRouter);
@@ -74,3 +74,9 @@ io.on("connection", sockets);
 httpServer.listen(process.env.PORT || 3001, () => {
   console.log("SERVER STARTED");
 });
+
+
+
+
+
+

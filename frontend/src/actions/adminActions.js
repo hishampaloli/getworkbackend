@@ -36,6 +36,7 @@ import {
 } from "../contants/paymentConstants";
 
 export const adminProfile = () => async (dispatch) => {
+
   try {
 
     dispatch({
@@ -57,6 +58,7 @@ export const adminProfile = () => async (dispatch) => {
       type: ADMIN_PROFILE_SUCCESS,
       payload: data,
     });
+    
   } catch (error) {
     dispatch({
       type: ADMIN_PROFILE_FAIL,

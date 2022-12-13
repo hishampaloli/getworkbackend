@@ -82,8 +82,8 @@ export const getAllJobs = AsyncHandler(async (req, res) => {
   const { budget, pageNumber } = req.query;
   try {
     const pageSize = 3;
+    
     const page = Number(pageNumber) || 1;
-
     let skip = pageSize * (page - 1);
 
     const count = await Jobs.count({ status: "active" });

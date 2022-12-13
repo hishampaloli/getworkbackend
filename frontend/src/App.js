@@ -48,14 +48,14 @@ function App() {
   const [socket, setSocket] = useState(null);
 
   useEffect(() => {
-    setSocket(io("https://getworker.ml"));
+    setSocket(io("http://localhost:3000"));
   }, []);
 
   useEffect(() => {
     setLoading(true);
-        setTimeout(() => {
-          setLoading(false);
-        }, 1000);
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
   }, []);
 
   return (
@@ -143,7 +143,7 @@ function App() {
               path="/employer/recharge"
               element={<EmployerRecharge />}
             />
-             <Route
+            <Route
               exact
               path="/help"
               element={<UserHelpPage socket={socket} />}
@@ -161,7 +161,13 @@ function App() {
             <Route exact path="/admin/users" element={<AdminUserPage />} />
             <Route exact path="/admin/kyc" element={<AdminKyc />} />
             <Route exact path="/admin/withdraw" element={<AdminWithdraw />} />
-            <Route exact path="/admin/message" element={<AdminMessage socket={socket} />} />
+            <Route
+              exact
+              path="/admin/message"
+              element={<AdminMessage socket={socket} />}
+            />
+
+          
           </Routes>
           {/* <Footer /> */}
         </Router>

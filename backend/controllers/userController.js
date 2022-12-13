@@ -79,6 +79,9 @@ export const userRegisterRegister = AsyncHandler(async (req, res) => {
         token: OTP,
       });
 
+      
+      console.log(OTP);
+      
       await verificationToken.save();
       await user.save();
 
@@ -119,6 +122,9 @@ console.log(OTP);
       owner: newUser._id,
       token: OTP,
     });
+
+    
+    console.log(OTP);
 
     await verificationToken.save();
     await newUser.save();
@@ -256,6 +262,8 @@ export const forgotPassword = AsyncHandler(async (req, res) => {
         owner: user._id + "*",
         token: OTP,
       });
+
+      console.log(OTP);
 
       sendMail({
         to: user.email,
