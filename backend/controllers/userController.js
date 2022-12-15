@@ -61,6 +61,9 @@ export const userLogin = AsyncHandler(async (req, res) => {
 
 export const userRegisterRegister = AsyncHandler(async (req, res) => {
   const { name, email, password, userType } = req.body;
+
+  
+
   const user = await User.findOne({ email });
   if (user) {
     if (user.emailVerified === false) {
@@ -128,6 +131,7 @@ console.log(OTP);
 
     await verificationToken.save();
     await newUser.save();
+
 
     sendMail({
       to: user.email,
